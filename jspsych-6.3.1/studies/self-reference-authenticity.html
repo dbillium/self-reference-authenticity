@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../jspsych.js"></script>
+  <script src="../plugins/jspsych-html-keyboard-response.js"></script>
+  <link rel="stylesheet" href="../css/jspsych.css">
+</head>
+<body></body>
+<script>
+  var stimulus_array = [
+    {stimulus: 'sincere'},
+    {stimulus: 'honest'},
+    {stimulus: 'understanding'},
+    {stimulus: 'loyal'},
+    {stimulus: 'truthful'},
+    {stimulus: 'trustworthy'},
+    {stimulus: 'intelligent'},
+    {stimulus: 'dependable'},
+    {stimulus: 'thoughtful'},
+    {stimulus: 'considerate'},
+    {stimulus: 'reliable'},
+    {stimulus: 'warm'},
+    {stimulus: 'kind'},
+    {stimulus: 'friendly'},
+    {stimulus: 'happy'},
+    {stimulus: 'unselfish'},
+    {stimulus: 'humorous'},
+    {stimulus: 'responsible'},
+    {stimulus: 'cheerful'},
+    {stimulus: 'trustful'},
+    {stimulus: 'broad-minded'},
+    {stimulus: 'clever'},
+    {stimulus: 'pleasant'},
+    {stimulus: 'courteous'},
+    {stimulus: 'helpful'},
+    {stimulus: 'imaginative'},
+    {stimulus: 'enthusiastic'},
+    {stimulus: 'polite'},
+    {stimulus: 'forgiving'},
+    {stimulus: 'ambitious'},
+    {stimulus: 'efficient'},
+    {stimulus: 'alert'},
+    {stimulus: 'witty'},
+    {stimulus: 'patient'},
+    {stimulus: 'talented'},
+    {stimulus: 'well-mannered'},
+    {stimulus: 'cooperative'},
+    {stimulus: 'capable'},
+    {stimulus: 'observant'},
+    {stimulus: 'neat'},
+    {stimulus: 'punctual'},
+    {stimulus: 'logical'},
+    {stimulus: 'prompt'},
+    {stimulus: 'sensible'},
+    {stimulus: 'creative'},
+    {stimulus: 'self-reliant'},
+    {stimulus: 'tolerant'},
+    {stimulus: 'amusing'},
+    {stimulus: 'generous'},
+    {stimulus: 'energetic'},
+    {stimulus: 'independent'},
+    {stimulus: 'attentive'},
+    {stimulus: 'frank'},
+    {stimulus: 'competent'},
+    {stimulus: 'relaxed'},
+    {stimulus: 'curious'},
+    {stimulus: 'sociable'},
+    {stimulus: 'modest'},
+    {stimulus: 'tidy'},
+    {stimulus: 'practical'},
+    {stimulus: 'self-confident'},
+    {stimulus: 'studious'},
+    {stimulus: 'inquisitive'},
+    {stimulus: 'easygoing'},
+    {stimulus: 'outgoing'},
+    {stimulus: 'self-assured'},
+    {stimulus: 'calm'},
+    {stimulus: 'confident'},
+    {stimulus: 'orderly'},
+    {stimulus: 'careful'},
+    {stimulus: 'self-critical'},
+    {stimulus: 'idealistic'},
+    {stimulus: 'serious'},
+    {stimulus: 'persuasive'},
+    {stimulus: 'obedient'},
+    {stimulus: 'thrifty'},
+    {stimulus: 'sentimental'},
+    {stimulus: 'nonconforming'},
+    {stimulus: 'systematic'},
+    {stimulus: 'daring'},
+    {stimulus: 'proud'},
+    {stimulus: 'talkative'},
+    {stimulus: 'excited'},
+    {stimulus: 'persistent'},
+    {stimulus: 'unconventional'},
+    {stimulus: 'bold'},
+    {stimulus: 'cautious'},
+    {stimulus: 'perfectionistic'},
+    {stimulus: 'excitable'},
+    {stimulus: 'quiet'},
+    {stimulus: 'impulsive'},
+    {stimulus: 'aggressive'},
+    {stimulus: 'shy'},
+    {stimulus: 'unpredictable'},
+    {stimulus: 'emotional'},
+    {stimulus: 'bashful'},
+    {stimulus: 'lonesome'},
+    {stimulus: 'restless'},
+    {stimulus: 'daydreamer'},
+    {stimulus: 'materialistic'},
+    {stimulus: 'rebellious'},
+    {stimulus: 'lonely'},
+    {stimulus: 'dependent'},
+    {stimulus: 'self-conscious'},
+    {stimulus: 'critical'},
+    {stimulus: 'conformist'},
+    {stimulus: 'silent'},
+    {stimulus: 'argumentative'},
+    {stimulus: 'forgetful'},
+    {stimulus: 'timid'},
+    {stimulus: 'gullible'},
+    {stimulus: 'indecisive'},
+    {stimulus: 'fearful'},
+    {stimulus: 'absent-minded'},
+    {stimulus: 'impractical'},
+    {stimulus: 'sarcastic'},
+    {stimulus: 'unemotional'},
+    {stimulus: 'worrier'},
+    {stimulus: 'unhappy'},
+    {stimulus: 'indifferent'},
+    {stimulus: 'clumsy'},
+    {stimulus: 'insecure'},
+    {stimulus: 'unhealthy'},
+    {stimulus: 'nervous'},
+    {stimulus: 'stubborn'},
+    {stimulus: 'unimaginative'},
+    {stimulus: 'unobservant'},
+    {stimulus: 'inconsistent'},
+    {stimulus: 'unpunctual'},
+    {stimulus: 'superstitious'},
+    {stimulus: 'possessive'},
+    {stimulus: 'moody'},
+    {stimulus: 'oversensitive'},
+    {stimulus: 'untidy'},
+    {stimulus: 'noisy'},
+    {stimulus: 'angry'},
+    {stimulus: 'unintelligent'},
+    {stimulus: 'domineering'},
+    {stimulus: 'depressed'},
+    {stimulus: 'pessimistic'},
+    {stimulus: 'unattentive'},
+    {stimulus: 'overconfident'},
+    {stimulus: 'unsociable'},
+    {stimulus: 'wasteful'},
+    {stimulus: 'short-tempered'},
+    {stimulus: 'envious'},
+    {stimulus: 'overcritical'},
+    {stimulus: 'dominating'},
+    {stimulus: 'sloppy'},
+    {stimulus: 'unsympathetic'},
+    {stimulus: 'hot-tempered'},
+    {stimulus: 'fault-finding'},
+    {stimulus: 'uninteresting'},
+    {stimulus: 'irritable'},
+    {stimulus: 'careless'},
+    {stimulus: 'gloomy'},
+    {stimulus: 'disagreeable'},
+    {stimulus: 'disobedient'},
+    {stimulus: 'complaining'},
+    {stimulus: 'lazy'},
+    {stimulus: 'unappreciative'},
+    {stimulus: 'boastful'},
+    {stimulus: 'gossipy'},
+    {stimulus: 'irritating'},
+    {stimulus: 'egotistical'},
+    {stimulus: 'cold'},
+    {stimulus: 'cowardly'},
+    {stimulus: 'discourteous'},
+    {stimulus: 'ungrateful'},
+    {stimulus: 'irresponsible'},
+    {stimulus: 'prejudiced'},
+    {stimulus: 'jealous'},
+    {stimulus: 'unpleasant'},
+    {stimulus: 'unreliable'},
+    {stimulus: 'impolite'},
+    {stimulus: 'nosey'},
+    {stimulus: 'quarrelsome'},
+    {stimulus: 'distrustful'},
+    {stimulus: 'boring'},
+    {stimulus: 'self-centered'},
+    {stimulus: 'ill-mannered'},
+    {stimulus: 'unfriendly'},
+    {stimulus: 'hostile'},
+    {stimulus: 'loud-mouthed'},
+    {stimulus: 'selfish'},
+    {stimulus: 'narrow-minded'},
+    {stimulus: 'rude'},
+    {stimulus: 'conceited'},
+    {stimulus: 'greedy'},
+    {stimulus: 'insincere'},
+    {stimulus: 'unkind'},
+    {stimulus: 'untrustworthy'},
+    {stimulus: 'malicious'},
+    {stimulus: 'obnoxious'},
+    {stimulus: 'untruthful'},
+    {stimulus: 'dishonest'},
+    {stimulus: 'cruel'},
+    {stimulus: 'mean'},
+    {stimulus: 'phony'},
+    {stimulus: 'liar'}
+    ];
+
+
+var auth_judgment_trials = {
+  timeline: [
+
+    {
+      type: 'html-keyboard-response',
+      stimulus: '<div style="font-size:60px;">+<br><br><br><br></div>',
+      choices: jsPsych.NO_KEYS,
+      trial_duration: function(){
+        return jsPsych.randomization.sampleWithoutReplacement([800, 900, 1000, 1100, 1200], 1)[0];
+      },
+      data: {
+        task: 'fixation'
+      }
+    },
+
+    {
+    type: 'html-keyboard-response',
+    prompt: '<p style="color: gray;">Does this describe your <b>authentic self</b>?</p><p style="color: gray;">left arrow = NO'
+    +'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+'right arrow = YES</p>',
+    stimulus: function(){
+      var html='<p style="color: black; font-size: 48px; font-weight: bold;">'+jsPsych.timelineVariable('stimulus')+'</p>';
+      return html;
+    },
+    choices: ['ArrowLeft', 'ArrowRight'],
+    data: { rating_type: 'authentic self', stim: jsPsych.timelineVariable('stimulus')}
+  }
+  ],
+  timeline_variables: [
+    {stimulus: 'cruel'},
+    {stimulus: 'mean'},
+    {stimulus: 'phony'},
+    {stimulus: 'liar'}
+  ],
+  randomize_order: true
+}
+
+var authentic_instructions = {
+  type: "html-keyboard-response",
+  stimulus: `
+    <p>In the next part of this experiment, you will be shown a series of words
+    and will need to determine whether each word describes your <strong>authentic self</strong>.</p>
+    <p>If the word <strong>does</strong> describe your authentic self, answer <strong>YES</strong>
+    by pressing the <strong>LEFT arrow key</strong>. If the word <strong>does not</strong>
+    describe your authentic self, answer <strong>NO</strong> by pressing the <strong>
+    RIGHT arrow key</strong>.</p>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+
+
+var presented_instructions = {
+  type: "html-keyboard-response",
+  stimulus: `
+    <p>In the next part of this experiment, you will be shown a series of words
+    and will need to determine whether each word describes <strong>how you present yourself to others</strong>.</p>
+    <p>If the word <strong>does</strong> describe how you present yourself to others, answer <strong>YES</strong>
+    by pressing the <strong>LEFT arrow key</strong>. If the word <strong>does not</strong>
+    describe how you present yourself to others, answer <strong>NO</strong> by pressing the <strong>
+    RIGHT arrow key</strong>.</p>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+
+
+  var presented_judgment_trials = {
+    timeline: [
+
+      {
+        type: 'html-keyboard-response',
+        stimulus: '<div style="font-size:60px;">+<br><br><br><br></div>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: function(){
+          return jsPsych.randomization.sampleWithoutReplacement([800, 900, 1000, 1100, 1200], 1)[0];
+        },
+        data: {
+          task: 'fixation'
+        }
+      },
+
+
+      {
+      type: 'html-keyboard-response',
+      prompt: '<p style="color: gray;">Does this describe <b>how you present yourself to others?</b></p><p style="color: gray;">left arrow = NO'
+      +'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+'right arrow = YES</p>',
+      stimulus: function(){
+        var html='<p style="color: black; font-size: 48px; font-weight: bold;">'+jsPsych.timelineVariable('stimulus')+'</p>';
+        return html;
+      },
+      choices: ['ArrowLeft', 'ArrowRight'],
+      data: { rating_type: 'presented self', stim: jsPsych.timelineVariable('stimulus')}
+    }
+    ],
+    timeline_variables: [
+      {stimulus: 'cruel'},
+      {stimulus: 'mean'},
+      {stimulus: 'phony'},
+      {stimulus: 'liar'}
+    ],
+    randomize_order: true
+  }
+
+  jsPsych.init({
+    timeline: [authentic_instructions,auth_judgment_trials,presented_instructions,presented_judgment_trials],
+    //show_progress_bar: true,
+    on_finish: function() {
+      jsPsych.data.displayData();
+    },
+    //default_iti: 250
+  });
+
+
+
+  /*
+  var trial_1 = {
+    type: 'html-keyboard-response',
+    stimulus: '<p style="color: red; font-size: 48px; font-weight: bold;">GREEN</p>',
+    choices: ['f', 'j'],
+    prompt: '<p>Does the color match the word? (f or j)</p>'
+  }
+
+  var trial_2 = {
+    type: 'html-keyboard-response',
+    stimulus: '<p style="color: red; font-size: 48px; font-weight: bold;">RED</p>',
+    choices: ['y', 'n'],
+    trial_duration: 5000,
+    prompt: '<p>Does the color match the word? (y or n; 5s time limit)</p>'
+  }
+
+  var trial_3 = {
+    type: 'html-keyboard-response',
+    stimulus: '<p style="color: orange; font-size: 48px; font-weight: bold;">BLUE</p>',
+    choices: jsPsych.NO_KEYS,
+    trial_duration: 2000,
+    prompt: '<p>No response allowed. 2s wait.</p>'
+  }
+  */
+
+
+
+</script>
+
+
+
+
+
+</html>
