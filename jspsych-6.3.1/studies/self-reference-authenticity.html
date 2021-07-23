@@ -317,6 +317,7 @@ var presented_instructions = {
   jsPsych.init({
     timeline: [authentic_instructions,auth_judgment_trials,presented_instructions,presented_judgment_trials],
     //show_progress_bar: true,
+    experiment_width: 750,
     on_finish: function() {
       jsPsych.data.displayData();
     },
